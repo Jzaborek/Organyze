@@ -1,0 +1,46 @@
+@use "partials/colors"
+
+\:host
+  position: relative
+  background-color: colors.$primary-dark
+  width: 75px
+
+\:host.expanded
+  width: 500px
+
+.sidebar-header
+  background-color: colors.$primary-mid
+  border-bottom: 1px solid colors.$primary-darker
+  position: sticky
+  top: 0
+
+.org-list
+  height: calc(100% - 60px)
+  overflow-x: hidden
+  overflow-y: auto
+
+button
+  position: absolute
+  right: 0
+  top: 0
+
+p
+  margin: 0
+  font-size: 20px
+  display: block
+  line-height: 40px
+  height: 40px
+  padding: 10px
+  color: white
+
+a
+  font-size: 20px
+  display: block
+  line-height: 50px
+  height: 50px
+  padding: 10px
+  color: colors.$secondary-dark
+
+  &:hover
+    color: colors.$primary
+    background-color: colors.$secondary-darker

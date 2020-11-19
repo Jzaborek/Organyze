@@ -1,0 +1,9 @@
+<div class="user-image">
+  <img class="profile-placeholder" src="assets/img/profile.png">
+</div>
+<div class="user-info">
+  <p><span>Name: </span>{{ employee.lastName }}, {{ employee.firstName }}</p>
+  <p><span>Email: </span>{{ employee.email }}</p>
+  <p><span>Positions: </span>{{ employee.positions.join(', ') }}</p>
+</div>
+<button (click)="deleteEmployee()">x</button>

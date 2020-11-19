@@ -30,6 +30,11 @@
             "styles": [
               "src/styles.sass"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles"
+              ]
+            },
             "scripts": []
           },
           "configurations": {

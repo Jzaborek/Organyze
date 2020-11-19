@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+@import "partials/colors"
+
+body, html
+  height: 100%
+  margin: 0
+  padding: 0
+  font-family: Tahoma, Geneva, sans-serif
+
+a, button
+  cursor: pointer
+
+input
+  cursor: text
+
+.org-button, .org-button:active, .org-button:focus
+  border: 1px solid $primary-dark
+  outline: none
+  background-color: white
+  color: $primary-dark
+  height: 40px
+  border-radius: 7px
+  cursor: pointer
+  padding: 0 20px
+  margin: 10px
+
+.org-button:hover
+  background-color: $primary-mid
+  color: white
+  border: 1px solid $primary-darker
+
+.org-input
+  padding: 10px
+  border: 1px solid $primary-darker
+  border-radius: 7px
+  margin: 10px
+  width: 210px
+
+  &:focus
+    outline: $primary-darker auto 1px
+
+.org-input::placeholder
+  color: $primary-darker

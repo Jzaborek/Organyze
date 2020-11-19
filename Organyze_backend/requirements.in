@@ -1,0 +1,5 @@
+django-cors-headers
+djangorestframework
+djangorestframework-camel-case
+markdown
+psycopg2-binary

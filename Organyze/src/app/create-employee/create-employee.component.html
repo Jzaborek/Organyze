@@ -1,0 +1,9 @@
+<div>
+  <h4>Create New Employee</h4>
+  <form [formGroup]="newEmployeeForm" (ngSubmit)="saveNewEmployee()">
+    <input orgInput autocomplete="off" type="text" placeholder="First Name" formControlName="firstName" required/>
+    <input orgInput autocomplete="off" type="text" placeholder="Last Name" formControlName="lastName" required/>
+    <input orgInput autocomplete="off" type="text" placeholder="Email" formControlName="email" required/>
+    <button orgButton type="submit">Submit</button>
+  </form>
+</div>

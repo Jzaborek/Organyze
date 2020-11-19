@@ -1,0 +1,9 @@
+<div class="sidebar-header">
+  <p *ngIf="(expanded$ | async)">Organization List</p>
+  <button orgButton (click)="toggleExpanded()">
+    <fa-icon [icon]="expanded ? ['fas', 'times'] : ['fas', 'bars']"></fa-icon>
+  </button>
+</div>
+<div class="org-list" *ngIf="(expanded$ | async)">
+  <a *ngFor="let org of orgList">{{ org }}</a>
+</div>
