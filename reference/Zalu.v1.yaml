@@ -1,0 +1,474 @@
+openapi: 3.0.0
+info:
+  title: Zalu
+  version: '1.0'
+  description: Application Interactions
+  contact:
+    name: Joe
+    email: Jzaborek@gmail.com
+servers:
+  - url: 'http://localhost:3000'
+    description: Joseph Zaborek
+paths:
+  '/users/{userId}':
+    parameters:
+      - schema:
+          type: string
+        name: userId
+        in: path
+        required: true
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+      operationId: get-users-userId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                username:
+                  type: string
+                accountSince:
+                  type: string
+                accountEnd:
+                  type: string
+                autoRenew:
+                  type: boolean
+                billingDetails:
+                  type: string
+              required:
+                - email
+                - username
+                - accountSince
+                - accountEnd
+                - autoRenew
+                - billingDetails
+            examples:
+              example-1:
+                value:
+                  email: string
+                  username: string
+                  accountSince: string
+                  accountEnd: string
+                  autoRenew: true
+                  billingDetails: string
+      description: Get data for users
+    post:
+      summary: ''
+      operationId: post-users-userId
+      responses:
+        '200':
+          description: OK
+      description: Add new data for users
+      requestBody:
+        content:
+          application/json:
+            schema:
+              description: ''
+              type: object
+              properties:
+                email:
+                  type: string
+                  minLength: 1
+                username:
+                  type: string
+                  minLength: 1
+                accountSince:
+                  type: string
+                  minLength: 1
+                accountEnd:
+                  type: string
+                  minLength: 1
+                autoRenew:
+                  type: boolean
+                billingDetails:
+                  type: string
+                  minLength: 1
+              required:
+                - email
+                - username
+                - accountSince
+                - accountEnd
+                - autoRenew
+                - billingDetails
+        description: ''
+    put:
+      summary: ''
+      operationId: put-users-userId
+      responses:
+        '200':
+          description: OK
+      description: Update data for users
+      requestBody:
+        content:
+          application/json:
+            schema:
+              description: ''
+              type: object
+              properties:
+                email:
+                  type: string
+                  minLength: 1
+                username:
+                  type: string
+                  minLength: 1
+                accountSince:
+                  type: string
+                  minLength: 1
+                accountEnd:
+                  type: string
+                  minLength: 1
+                autoRenew:
+                  type: boolean
+                billingDetails:
+                  type: string
+                  minLength: 1
+              required:
+                - email
+                - username
+                - accountSince
+                - accountEnd
+                - autoRenew
+                - billingDetails
+    delete:
+      summary: ''
+      operationId: delete-users-userId
+      responses:
+        '200':
+          description: OK
+      description: Delete data for users
+      requestBody:
+        content:
+          application/json:
+            schema:
+              description: ''
+              type: object
+              properties:
+                email:
+                  type: string
+                  minLength: 1
+                username:
+                  type: string
+                  minLength: 1
+                accountSince:
+                  type: string
+                  minLength: 1
+                accountEnd:
+                  type: string
+                  minLength: 1
+                autoRenew:
+                  type: boolean
+                billingDetails:
+                  type: string
+                  minLength: 1
+              required:
+                - email
+                - username
+                - accountSince
+                - accountEnd
+                - autoRenew
+                - billingDetails
+  '/records/{ID}':
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+      operationId: get-records
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                firstName:
+                  type: string
+                lastName:
+                  type: string
+                geography:
+                  type: string
+                title:
+                  type: string
+                lastContacted:
+                  type: string
+                ParentOf:
+                  type: string
+                childOf:
+                  type: string
+                notes:
+                  type: string
+                demoDate:
+                  type: string
+            examples:
+              example-1:
+                value:
+                  firstName: string
+                  lastName: string
+                  geography: string
+                  title: string
+                  lastContacted: string
+                  ParentOf: string
+                  childOf: string
+                  notes: string
+      description: Get data for records
+    parameters:
+      - schema:
+          type: string
+        name: ID
+        in: path
+        required: true
+    post:
+      summary: ''
+      operationId: post-records-ID
+      responses:
+        '200':
+          description: OK
+      requestBody:
+        content:
+          application/json:
+            schema:
+              description: ''
+              type: object
+              properties:
+                firstName:
+                  type: string
+                  minLength: 1
+                lastName:
+                  type: string
+                  minLength: 1
+                geography:
+                  type: string
+                  minLength: 1
+                title:
+                  type: string
+                  minLength: 1
+                lastContacted:
+                  type: string
+                  minLength: 1
+                ParentOf:
+                  type: string
+                  minLength: 1
+                childOf:
+                  type: string
+                  minLength: 1
+                notes:
+                  type: string
+                  minLength: 1
+              required:
+                - firstName
+                - lastName
+                - geography
+                - title
+                - lastContacted
+                - ParentOf
+                - childOf
+                - notes
+      description: Add data for records
+    put:
+      summary: ''
+      operationId: put-records-ID
+      responses:
+        '200':
+          description: OK
+      requestBody:
+        content:
+          application/json:
+            schema:
+              description: ''
+              type: object
+              properties:
+                firstName:
+                  type: string
+                  minLength: 1
+                lastName:
+                  type: string
+                  minLength: 1
+                geography:
+                  type: string
+                  minLength: 1
+                title:
+                  type: string
+                  minLength: 1
+                lastContacted:
+                  type: string
+                  minLength: 1
+                ParentOf:
+                  type: string
+                  minLength: 1
+                childOf:
+                  type: string
+                  minLength: 1
+                notes:
+                  type: string
+                  minLength: 1
+              required:
+                - firstName
+                - lastName
+                - geography
+                - title
+                - lastContacted
+                - ParentOf
+                - childOf
+                - notes
+      description: Update data for records
+    delete:
+      summary: ''
+      operationId: delete-records-ID
+      responses:
+        '200':
+          description: OK
+      requestBody:
+        content:
+          application/json:
+            schema:
+              description: ''
+              type: object
+              properties:
+                firstName:
+                  type: string
+                  minLength: 1
+                lastName:
+                  type: string
+                  minLength: 1
+                geography:
+                  type: string
+                  minLength: 1
+                title:
+                  type: string
+                  minLength: 1
+                lastContacted:
+                  type: string
+                  minLength: 1
+                ParentOf:
+                  type: string
+                  minLength: 1
+                childOf:
+                  type: string
+                  minLength: 1
+                notes:
+                  type: string
+                  minLength: 1
+              required:
+                - firstName
+                - lastName
+                - geography
+                - title
+                - lastContacted
+                - ParentOf
+                - childOf
+                - notes
+      description: Delete data for records
+  /organizations:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+      operationId: get-organizations
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                accountName:
+                  type: string
+                parentOf:
+                  type: string
+                location:
+                  type: string
+                notes:
+                  type: string
+            examples:
+              example-1:
+                value:
+                  accountName: string
+                  parentOf: string
+                  location: string
+                  notes: string
+      description: Get data for Organizations
+    post:
+      summary: ''
+      operationId: post-organizations
+      responses:
+        '200':
+          description: OK
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+      description: Create new data for Organizations
+    put:
+      summary: ''
+      operationId: put-organizations
+      responses:
+        '200':
+          description: OK
+      requestBody:
+        content:
+          application/json:
+            schema:
+              description: ''
+              type: object
+              properties:
+                accountName:
+                  type: string
+                  minLength: 1
+                parentOf:
+                  type: string
+                  minLength: 1
+                location:
+                  type: string
+                  minLength: 1
+                notes:
+                  type: string
+                  minLength: 1
+              required:
+                - accountName
+                - parentOf
+                - location
+                - notes
+      description: Update data for Organizations
+    delete:
+      summary: ''
+      operationId: delete-organizations
+      responses:
+        '200':
+          description: OK
+      requestBody:
+        content:
+          application/json:
+            schema:
+              description: ''
+              type: object
+              properties:
+                accountName:
+                  type: string
+                  minLength: 1
+                parentOf:
+                  type: string
+                  minLength: 1
+                location:
+                  type: string
+                  minLength: 1
+                notes:
+                  type: string
+                  minLength: 1
+              required:
+                - accountName
+                - parentOf
+                - location
+                - notes
+      description: Delete data for Organizations
+components:
+  schemas: {}
