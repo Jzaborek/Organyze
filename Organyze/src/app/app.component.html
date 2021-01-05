@@ -1,16 +1,22 @@
 <div id="app-container">
-  <div class="header">
-    <h2>{{ title }}</h2>
-    <button orgButton id="refresh" (click)="refresh()">Refresh</button>
-  </div>
-  <div class="body">
-    <ng-container *ngFor="let employee of (employees$ | async)">
-      <org-employee [employee]="employee"></org-employee>
-    </ng-container>
-    <org-create-employee></org-create-employee>
-  </div>
-  <div class="footer">
-    <p>footer text</p>
-  </div>
-  <org-sidebar></org-sidebar>
+<!--  <div class="header">-->
+<!--    <h2>{{ title }}</h2>-->
+<!--    <button orgButton id="refresh" (click)="refresh()">Refresh</button>-->
+<!--  </div>-->
+<!--  <div class="body">-->
+<!--    <ng-container *ngFor="let employee of (employees$ | async)">-->
+<!--      <org-employee [employee]="employee"></org-employee>-->
+<!--    </ng-container>-->
+<!--    <org-create-employee></org-create-employee>-->
+  <org-slide-container [color]="'blue'"   [height]="150" [width]="500"></org-slide-container>
+  <org-slide-container [color]="'red'"    [height]="250" [width]="200"></org-slide-container>
+  <org-slide-container [color]="'green'"  [height]="150" [width]="800"></org-slide-container>
+  <org-slide-container [color]="'orange'" [height]="350" [width]="700"></org-slide-container>
+  <org-slide-container [color]="'purple'" [height]="250" [width]="400"></org-slide-container>
+  <org-slide-container></org-slide-container>
+<!--  </div>-->
+<!--  <div class="footer">-->
+<!--    <p>footer text</p>-->
+<!--  </div>-->
+<!--  <org-sidebar></org-sidebar>-->
 </div>
