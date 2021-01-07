@@ -15,8 +15,13 @@ export class SidebarComponent {
   public expanded$: Observable<boolean>;
   public orgList: string[];
 
+  // TODO: show only icons when collapsed, show icons and name when expanded
   constructor(private store: Store) {
     this.expanded$ = this.store.select(selectLayoutSidebarExpanded);
+    // TODO: make org list { name: string, img: string }[];
+    // [
+    //   { name: 'org1', img: '/assets/img/profile.png' }
+    // ]
     this.orgList = [
       'Org1',
       'Org2',

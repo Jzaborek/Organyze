@@ -17,7 +17,7 @@ import { OrgButtonDirective } from './demo/common/directives/org-button/org-butt
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { OrgInputDirective } from './demo/common/directives/org-input/org-input.directive';
-import {SlideContainerComponent} from './slide-container/slide-container.component';
+import { SlideDirective } from './directives/slide-container/slide.directive';
 
 @NgModule({
   declarations: [
@@ -26,10 +26,10 @@ import {SlideContainerComponent} from './slide-container/slide-container.compone
     CreateEmployeeComponent,
     EmployeeComponent,
     SidebarComponent,
-    SlideContainerComponent,
     // Directives
     OrgButtonDirective,
     OrgInputDirective,
+    SlideDirective,
   ],
   imports: [
     AppRoutingModule,
